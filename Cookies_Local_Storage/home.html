@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <title>Character Counter</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      flex-direction: column;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <label for="">Character Counter</label>
+    <textarea id="characters-field" cols="30" rows="10"></textarea>
+  </div>
+  <p id="display"></p>
+
+  <script>
+    const textArea = document.getElementById('characters-field');
+    let counter = 0;
+    const ignoreKeys = ['Backspace', 'Shift', 'Control', 'Capslock', 'Enter', 'Alt']
+
+    // An example of a call back function
+    textArea.onkeydown = function (event) {
+      const output = document.getElementById('display');
+      let keyStroke = event.key;
+
+      if (!ignoreKeys.includes(keyStroke))
+      {
+        counter = counter + 1;
+      }
+      else if (keyStroke=== 'Backspace' && counter > 0) {
+        counter = counter - 1;
+      }
+      
+      if (counter >= 50) {
+        alert("Maximum characters should be " + counter);
+        return;
+      }
+
+      
+      console.log("Hello " + event.key);
+      output.textContent = `You typed ${counter} character(s)`;
+    }
+    // console.log(textArea);
+  </script>
+  
+</body>
+</html>
