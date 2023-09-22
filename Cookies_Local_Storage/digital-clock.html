@@ -45,7 +45,7 @@
 
       const hours = currentDate.getHours();
       const minutes = currentDate.getMinutes();
-      const seconds = currentDate.getSeconds();
+      const seconds = String(currentDate.getSeconds()).padStart(2, '0');
 
       const timeFormat = `${hours}:${minutes}:${seconds}`;
       timeOutput.textContent = timeFormat;
