@@ -2,8 +2,8 @@
   "name": "Digital Clock",
   "version": "1.0",
   "manifest_version": 3,
-  "desciption": "Extension to digital clock to see time and date quickly",
-  "browser_action": {
+  "description": "Extension to digital clock to see time and date quickly",
+  "action": {
     "default_popup": "index.html"
   }
 }
