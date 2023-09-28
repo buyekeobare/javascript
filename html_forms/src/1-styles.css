@@ -5,7 +5,6 @@ form {
   /* Form outline */
   padding: 1em;
   border: 1px solid #ccc;
-  border-radius: 1em;
 }
 
 ul {
@@ -20,9 +19,9 @@ form li+li {
 
 label {
   /* Uniform size & alignment */
-  display: inline-block;
+  display: flex;
+  flex-direction:column;
   width: 90px;
-  text-align: right;
 }
 
 input,
@@ -32,7 +31,7 @@ textarea {
   font: 1em sans-serif;
 
   /* Uniform text field size */
-  width: 300px;
+  width: 180px;
   box-sizing: border-box;
 
   /* Match form field borders */
@@ -51,17 +50,5 @@ textarea {
 
   /* Provide space to type some text */
   height: 5em;
-}
-
-.button {
-  /* Align buttons with the text fields */
-  padding-left: 90px;
-  /* same size as the label elements */
-}
-
-button {
-  /* This extra margin represent roughly the same space as the space
-     between the labels and their text fields */
-  margin-left: 0.5em;
 }
 
