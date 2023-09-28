@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Structure</title>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>
+        Fruit juice size
+      </legend>
+      <p>
+        <input type="radio" name="size" id="size_1" value="small">
+        <label for="size_1">Small</label>
+      </p>
+      <p>
+        <input type="radio" name="size" id="size_2" value="medium">
+        <label for="size_2">Medium</label>
+      </p>
+      <p>
+        <input type="radio" name="size" id="size_3" value="Large">
+        <label for="size_3">Large</label>
+      </p>
+    </fieldset>
+  <p>
+    <input type="checkbox" name="taste_cherry" id="taste_1" value="cherry">
+    <label for="taste_1">I like Cherry</label>
+  </p>
+  <p>
+    <input type="checkbox" name="taste_banana" id="taste_2" value="banana">
+    <label for="taste_2">I like banana</label>
+  </p>
+  <p>
+    Required fields are followed by
+    <strong><span aria-label="required">*</span></strong>
+  </p>
+  <div>
+    <label for="username">Name:<span aria-label="reuired">*</span></label>
+    <input type="text" name="username" id="username" required>
+  </div>
+  </form>
+</body>
+</html>
