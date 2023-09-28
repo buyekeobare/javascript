@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 Controls</title>
+  <style>
+    h2 {
+      text-align: center;
+    }
+
+    form {
+      /* Center the form on the page */
+      margin: 50px auto;
+      width: 800px;
+      /* Form outline */
+      padding: 2em;
+      border: 1px solid #ccc;
+    }
+
+    label {
+      /* Uniform size & alignment */
+      display: inline;
+      width: 90px;
+      text-align: right;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;  
+    }
+
+    form li+li {
+      margin-top: 1em;
+    }
+
+  </style>
+</head>
+<body>
+  <form>
+    <h2>Edit your preferences</h2>
+    <ul>
+      <li>
+        <label for="e-mail">Email:</label>
+        <input type="email" name="email" id="e-mail">
+  
+      </li>
+      <li>
+        <label for="website">Website:</label>
+        <input type="url" name="url" id="website">
+  
+      </li>
+      <li>
+        <label for="phone">Phone number:</label>
+        <input type="tel" name="tel" id="phone">
+  
+      </li>
+      <li>
+        <label class="color" for="fave-color">Favorite color:</label>
+        <input type="color" name="color" id="fave-color">
+  
+      </li>
+      <li>
+        <button type="submit">Update preferences</button>
+      </li>
+    </ul>
+  </form>
+</body>
+</html>
