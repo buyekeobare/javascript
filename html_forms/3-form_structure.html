@@ -7,6 +7,7 @@
 </head>
 <body>
   <form>
+    <!--Fieldset and legend-->
     <fieldset>
       <legend>
         Fruit juice size
@@ -24,6 +25,7 @@
         <label for="size_3">Large</label>
       </p>
     </fieldset>
+    <!--Checkbox-->
   <p>
     <input type="checkbox" name="taste_cherry" id="taste_1" value="cherry">
     <label for="taste_1">I like Cherry</label>
@@ -36,10 +38,58 @@
     Required fields are followed by
     <strong><span aria-label="required">*</span></strong>
   </p>
+  <!--Multiple Labels-->
   <div>
     <label for="username">Name:<span aria-label="reuired">*</span></label>
     <input type="text" name="username" id="username" required>
   </div>
+  <!--Image button-->
+  <p>
+  <input type="image" alt="Click me!" src="my-img.png" width="80" height="30" />
+  </p>
+  <!--Slider Controls-->
+  <p>
+    <label for="price">Choose a maximum house price: </label>
+    <input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000" />
+    <output class="price-output" for="price"></output>
+    <button type="submit">Submit</button>
+  </p>
+  <!--Datetime-local-->
+  <p>
+    <input type="datetime-local" name="datetime" id="datetime" />
+  </p>
+  <!--Month-->
+  <p>
+      <input type="month" name="month" id="month" />
+  </p>
+  <!--Time-->
+  <p>
+    <input type="time" name="time" id="time" />
+  </p>
+  <!--Week-->
+  <p>
+    <input type="week" name="week" id="week" />
+  </p>
+  <!--Constraining date/time values-->
+  <p>
+    <label for="myDate">When are you available this summer?</label>
+    <input type="date" name="myDate" min="2013-06-01" max="2013-08-31" step="7" id="myDate" />
+  </p>
+  <!--Color picker control-->
+  <p>
+    <input type="color" name="color" id="color" />
+    <button type="submit">Submit</button>
+  </p>
   </form>
+  <script>
+    const price = document.querySelector("#price");
+      const output = document.querySelector(".price-output");
+
+      output.textContent = price.value;
+
+      price.addEventListener("input", () => {
+        output.textContent = price.value;
+      });
+  </script>
 </body>
 </html>
