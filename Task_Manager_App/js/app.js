@@ -17,5 +17,6 @@ taskBtn.addEventListener("click", function() {
 })
 
 const createTaskItems = () => {
-  
+  const cardDiv = document.createElement('div');
+  cardDiv.setAttribute('class', 'card');
 }
